@@ -1,4 +1,5 @@
-#The first is reading the README document:
+#The first is reading the README document
+#Read the help.txt to get help for problems
   
 #Steps to do a domain in Windows Server are :
 
