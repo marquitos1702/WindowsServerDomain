@@ -2,8 +2,9 @@
   
 #Steps to do a domain in Windows Server are :
 
-#First step, Install
+#The first step: install the AD DS Role in the server with the following commmand.
 
+Install-WindowsFeature -Name AD-DomainServices -IncludeManagementTools
 
-
+#The second step: 
 
