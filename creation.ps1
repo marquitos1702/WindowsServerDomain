@@ -23,9 +23,13 @@ Install-WindowsFeature -Name AD-DomainServices -IncludeManagementTools
   
 # The third step: install the roles(For example: dns,dhcp,STMP)
 #Install-WindowsFeature -Name <feature_name>  -Restart
-Install-WindowsFeature -Name DNS  
-Install-WindowsFeature -Name DHCP  
-Install-WindowsFeature -Name SMTP-Server 
+Install-WindowsFeature -Name DNS –IncludeManagementTools 
+Install-WindowsFeature -Name DHCP  –IncludeManagementTools
+Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
+Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
+Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
+Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
+Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
   #To unistall any windows role or feature do the next command:
   #Uninstall-WindowsFeature -Name <feature_name>  -Restart
 
