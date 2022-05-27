@@ -21,14 +21,14 @@ Install-WindowsFeature -Name AD-DomainServices -IncludeManagementTools
   -SysvolPath "C:\Windows\SYSVOL" `
   -Force:$true `
   
-# The third step: install the features(For example: dns,dhcp,STMP)
+# The third step: install the roles(For example: dns,dhcp,STMP)
 #Install-WindowsFeature -Name <feature_name>  -Restart
-Install-WindowsFeature -Name DNS  -Restart
-Install-WindowsFeature -Name DHCP  -Restart
-Install-WindowsFeature -Name SMTP-Server -Restart
-  #To unistall any windows feature do the next command:
+Install-WindowsFeature -Name DNS  
+Install-WindowsFeature -Name DHCP  
+Install-WindowsFeature -Name SMTP-Server 
+  #To unistall any windows role or feature do the next command:
   #Uninstall-WindowsFeature -Name <feature_name>  -Restart
 
-# The third step: install the roles
-
+# The third step: install the features
+Install-WindowsFeature -Name Net-Framework-Core
 
