@@ -1,5 +1,4 @@
 #The first is reading the README document
-#Read the help.txt to get help for problems
   
 #Steps to do a domain in Windows Server are :
   #To list all features and roles write the next command:
