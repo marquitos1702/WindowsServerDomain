@@ -7,7 +7,7 @@
 
 Install-WindowsFeature -Name AD-DomainServices -IncludeManagementTools
 
-#The second step: 
+#The second step is configure the AD-DomainService: 
 
    Install-ADDSForest `
   -DomainName "example.com" `
