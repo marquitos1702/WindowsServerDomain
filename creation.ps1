@@ -8,17 +8,27 @@ Install-WindowsFeature -Name AD-DomainServices -IncludeManagementTools
 
 #The second step is configure the AD-DomainService: 
 
+   #Command to setup new active directory domain 
    Install-ADDSForest `
+   #Defines the FWDN(Fully Qualified Domain Name)
   -DomainName "example.com" `
+   #Its a parameter witch create a DNS delegations 
   -CreateDnsDelegation:$false `  
+   #Path to store Ntds.dit(Ative directory database file) 
   -DatabasePath "C:\Windows\NTDS" ` 
   -DomainMode "WinThreshold" `  
+   #Defines the NetBios name
   -DomainNetbiosName "Example" ` 
   -ForestMode "WinThreshold" ` 
-  -InstallDns:$true ` 
+   #Fo a forest instalation is a requeriment 
+  -InstallDns:$false `
+   #To save log fiels
   -LogPath "C:\Windows\NTDS" `  
+   #Cancel the system restart 
   -NoRebootOnCompletion:$True `  
+   #Define the path of SYSVOL folder path
   -SysvolPath "C:\Windows\SYSVOL" `
+   #Force the commando and ignore the any warning
   -Force:$true `
   
 # The third step: install the roles(For example: dns,dhcp,STMP)
