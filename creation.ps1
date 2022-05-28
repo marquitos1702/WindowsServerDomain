@@ -26,13 +26,9 @@ Install-WindowsFeature -Name AD-DomainServices -IncludeManagementTools
 Install-WindowsFeature -Name DNS –IncludeManagementTools 
 Install-WindowsFeature -Name DHCP  –IncludeManagementTools
 Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
-Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
-Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
-Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
-Install-WindowsFeature -Name SMTP-Server –IncludeManagementTools
-  #To unistall any windows role or feature do the next command:
+  #To unistall any windows role or feature do the next command
   #Uninstall-WindowsFeature -Name <feature_name>  -Restart
 
-# The third step: install the features
+# You must install this feature if you use a servermail(ex:hmail)
 Install-WindowsFeature -Name Net-Framework-Core
 
